@@ -1,0 +1,368 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet collectif Human Booster</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- début barre de navigation -->
+    <header id="header">
+        <a href="index.html"><img class="logo" src="img/phenixLogo2.png" alt="Logo promo Phenix" titre="promo Phenix"></a> 
+        <ul class="navBar">
+            <a href="HTML/stagiaires.html" class="navigation"><li>NOS PROFILS</li></a>
+            <a href="HTML/cursus.html#boutton" class="navigation"><li>NOTRE CURSUS</li></a>
+            <a href="HTML/pageActus.html" class="navigation"><li>NOTRE ACTU</li></a>
+        </ul>
+    </header>
+    <!-- fin barre de navigation -->
+    <!-- Video de presentation -->
+    <iframe width="1080" height="630" src="https://www.youtube.com/embed/eHNOq2yW_KM?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="box0">
+        <span>Peu importe la destination, seul le chemin parcouru compte</span>
+        <p>Ce projet est le fruit d’une collaboration active entre 16 personnes. De la phase de conception à la phase de développement chacun des membres de l’équipe a participé à la réalisation du site.  Nous remercions notre formatrice, Blandine Renucci, ainsi que notre organisme de formation HumanBooster pour nous avoir permis de mettre en oeuvre le projet Phénix.</p>
+    </section>
+        <!-- Debut box texte 1 -->
+    <section class="box1">
+        <div class="ticket1"></div>
+        <div class="textePresentation">
+            <h1>Vous recrutez vos futurs développeurs,</h1>
+            <p class="presentation">et non des caristes, médecins, secrétaires, ou mécaniciens ? Ça tombe bien, nous nous sommes reconvertis ! Nous avons des parcours divergents, des expériences multiples, mais un objectif commun : devenir les meilleurs développeurs ! Rien que ça...
+            Envie d'en savoir plus ? Baladez vous sur ce site et découvrez nos profils, nos expertises techniques, et nos aspirations.
+            Atypiques, authentiques et motivés, des stagiaires répondront forcément à vos besoins ! 
+            </p>
+            <p class="contactUs"><strong>Contactez-nous !</strong></p>
+        </div>
+        <div class="ticket2"></div>
+    </section>
+    <!-- Fin box texte 1 -->
+    <hr>
+    <!-- Debut carrousel carte+post-it -->
+    <h2>Piochez vos stagiaires</h2>
+    <section class="carrousel">
+        <img src="img/pense-bete-2.png" class="postIt" alt="">
+        <a href="HTML/stagiaires.html" class="navigation"><div class="carousel"></div></a>
+        <script>
+            'use strict';
+
+            class Carousel {
+            constructor(el) {
+                this.el = el;
+                this.carouselOptions = ['previous', 'next'];
+                this.carouselData = [
+                {
+                    'id': '1',
+                    'src': 'img/carte1.png',
+                },
+                {
+                    'id': '2',
+                    'src': 'img/carte2.png',
+                },
+                {
+                    'id': '3',
+                    'src': 'img/carte3.png',
+                },
+                {
+                    'id': '4',
+                    'src': 'img/carte4.png',
+                },
+                {
+                    'id': '5',
+                    'src': 'img/carte5.png',
+                },
+                {
+                    'id': '6',
+                    'src': 'img/carte6.png',
+                },
+                {
+                    'id': '7',
+                    'src': 'img/carte7.png',
+                },
+                {
+                    'id': '8',
+                    'src': 'img/carte8.png',
+                },
+                {
+                    'id': '9',
+                    'src': 'img/carte9.png',
+                },
+                {
+                    'id': '10',
+                    'src': 'img/carte10.png',
+                },
+                {
+                    'id': '11',
+                    'src': 'img/carte11.png',
+                },
+                {
+                    'id': '12',
+                    'src': 'img/carte12.png',
+                },
+                {
+                    'id': '13',
+                    'src': 'img/carte13.png',
+                },
+                {
+                    'id': '14',
+                    'src': 'img/carte14.png',
+                },
+                {
+                    'id': '15',
+                    'src': 'img/carte15.png',
+                },
+                {
+                    'id': '16',
+                    'src': 'img/carte16.png',
+                },
+                ];
+                this.carouselInView = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+                this.carouselContainer;
+                // this.carouselPlayState;
+            }
+            mounted() {
+                this.setupCarousel();
+            }
+            // Build carousel html
+            setupCarousel() {
+                const container = document.createElement('div');
+                const controls = document.createElement('div');
+                // Add container for carousel items and controls
+                this.el.append(container, controls);
+                container.className = 'carousel-container';
+                controls.className = 'carousel-controls';
+                
+                // Take dataset array and append items to container
+                this.carouselData.forEach((item, index) => {
+                const carouselItem = item.src ? document.createElement('img') : document.createElement('div');
+                container.append(carouselItem);
+                
+                // Add item attributes
+                carouselItem.className = `carousel-item carousel-item-${index + 1}`;
+                carouselItem.src = item.src;
+                carouselItem.setAttribute('loading', 'lazy');
+                // Used to keep track of carousel items, infinite items possible in carousel however min 5 items required
+                carouselItem.setAttribute('data-index', `${index + 1}`);
+                });
+                this.carouselOptions.forEach((option) => {
+                const btn = document.createElement('button');
+                const axSpan = document.createElement('span');
+                // Add accessibilty spans to button
+                axSpan.innerText = option;
+                axSpan.className = 'ax-hidden';
+                btn.append(axSpan);
+                // Add button attributes
+                btn.className = `carousel-control carousel-control-${option}`;
+                btn.setAttribute('data-name', option);
+                // Add carousel control options
+                controls.append(btn);
+                });
+                // After rendering carousel to our DOM, setup carousel controls' event listeners
+                this.setControls([...controls.children]);
+                // Set container property
+                this.carouselContainer = container;
+            }
+            setControls(controls) {
+                controls.forEach(control => {
+                control.onclick = (event) => {
+                    event.preventDefault();
+                    // Manage control actions, update our carousel data first then with a callback update our DOM
+                    this.controlManager(control.dataset.name);
+                };
+                });
+            }
+            controlManager(control) {
+                if (control === 'previous') return this.previous();
+                if (control === 'next') return this.next();
+            //  if (control === 'add') return this.add();
+            //  if (control === 'play') return this.play();
+                return;
+            }
+            previous() {
+                // Update order of items in data array to be shown in carousel
+                this.carouselData.unshift(this.carouselData.pop());
+                // Push the first item to the end of the array so that the previous item is front and center
+                this.carouselInView.push(this.carouselInView.shift());
+                // Update the css class for each carousel item in view
+                this.carouselInView.forEach((item, index) => {
+                this.carouselContainer.children[index].className = `carousel-item carousel-item-${item}`;
+                });
+                // Using the first 5 items in data array update content of carousel items in view
+                this.carouselData.slice(0, 5).forEach((data, index) => {
+                document.querySelector(`.carousel-item-${index + 1}`).src = data.src;
+                });
+            }
+            next() {
+            // Update order of items in data array to be shown in carousel
+                this.carouselData.push(this.carouselData.shift());
+                // Take the last item and add it to the beginning of the array so that the next item is front and center
+                this.carouselInView.unshift(this.carouselInView.pop());
+                // Update the css class for each carousel item in view
+                this.carouselInView.forEach((item, index) => {
+                this.carouselContainer.children[index].className = `carousel-item carousel-item-${item}`;
+                });
+                // Using the first 5 items in data array update content of carousel items in view
+                this.carouselData.slice(0, 5).forEach((data, index) => {
+                document.querySelector(`.carousel-item-${index + 1}`).src = data.src;
+                });
+            }
+            play() {
+                const playBtn = document.querySelector('.carousel-control-play');
+                const startPlaying = () => this.next();
+                if (playBtn.classList.contains('playing')) {
+                // Remove class to return to play button state/appearance
+                playBtn.classList.remove('playing');
+                // Remove setInterval
+                clearInterval(this.carouselPlayState); 
+                this.carouselPlayState = null; 
+                } else {
+                // Add class to change to pause button state/appearance
+                playBtn.classList.add('playing');
+                // First run initial next method
+                this.next();
+                // Use play state prop to store interval ID and run next method on a 1.5 second interval
+                this.carouselPlayState = setInterval(startPlaying, 1500);
+                };
+            }
+            }
+            // Refers to the carousel root element you want to target, use specific class selectors if using multiple carousels
+            const el = document.querySelector('.carousel');
+            // Create a new carousel object
+            const exampleCarousel = new Carousel(el);
+            // Setup carousel and methods
+            exampleCarousel.mounted();
+        </script>
+    </section>
+        <!-- Fin carrousel carte+post-it -->
+    <hr>
+        <!-- Debut box texte 1 -->
+    <section class="box2">
+        <div class="ticket1"></div>
+        <div class="textePresentation">
+            <blockquote cite="https://www.dico-citations.com/il-n-y-a-qu-un-oiseau-qui-se-renouvelle-et-se-redonne-lui-m-me-la-vie-les-assyriens-l-appellent-p-ovide/" ><h3>"Il n'y a qu'un seul oiseau qui se renouvelle et se redonne à lui-même la vie ; les assyriens l'appellent Phénix"</h3></blockquote>
+            <p class="presentation">La légende du Phénix, qui pour se régénérer, brûle dans le feu, se consume vers la mort puis renaît de ses cendres, est apparu pour nous comme une évidence. Ne jamais abandonner face aux épreuves de la vie, maintenir toujours un esprit combatif et s'adapter aux changements, résume parfaitement les membres de notre groupe. Quelle que soit notre ancienne profession, nous avons choisi de nous confronter aux difficultés, d'évoluer et d'ouvrir une nouvelle page dans notre vie. Ceci a naturellement créé un groupe soudé et motivé à travailler ensemble pour avancer.</p>
+        </div>
+        <div class="ticket2"></div>
+    </section>
+        <!-- Fin box texte 1 -->
+    <hr>
+        <!-- debut zone actu -->
+    <h4 class="titreActus">Actus</h4>
+    <div class="actus">
+        <div  class="derniereActu">
+            <a href="https://www.linkedin.com/posts/cindy-grisez-d%C3%A9veloppeur-web_daezveloppeurweb-activity-6990212252821803008-Gwvn?utm_source=share&utm_medium=member_desktop" target="_blank">
+                <img src="img/actu1.jpg" alt="">
+            </a>
+        </div>
+        <div class="derniereActu">
+            <a href="https://www.linkedin.com/posts/mohamed-djebali-developpeur-web_developpementweb-humanbooster-expertisestechniques-activity-6990713038924337152-M5As?utm_source=share&utm_medium=member_desktop" target="_blank">
+                <img src="img/actu2.jpg" alt="">
+            </a>
+        </div>
+    </div>
+        <!-- fin zone actu -->
+    <hr>
+        <!-- Debut zone témoignage -->
+    <section>
+        <div class="box">
+            <img class="penseBête"src="img/pense-bete-1.png"alt="pense bête">
+            <h4 id="titreCitation"><q>Pour connaître la route devant toi, demande à ceux qui l'ont parcourue</q></h4>
+            <div id="carrousel">
+            <div id="container"></div>
+                <img src="img/Buttonl.png" alt="" class="button" id="right">
+                <img src="img/Buttonl.png" alt="" class="button" id="left">
+            </div>
+            <!-- Au chargement de la page, déclaration et initialisation d'une variable dans une fonction anonyme qui va contenir le nombre de témoignage -->
+            <script>document.body.onload = function(){
+                /* Nombre d'image dans le carrousel */
+                nombre = 5;
+                /* On définit le carrousel à la valeur 0 */
+                position = 0;
+                /* DOM pour récupérer les parties HTML sur lesquelles je veux agir */
+                container = document.getElementById("container");
+                left = document.getElementById("left");
+                right = document.getElementById("right");
+                container.style.width = (800*nombre)+"px";
+                /* Structure itérative pour parcourir les images de mon dossier */
+                for (i=1;i<=nombre;i++){
+                    /* Création dynamique d'une div dans laquelle je vais incrémenter mes images */
+                    div = document.createElement("div");
+                    div.className = "temoignageApprenant"
+                    div.innerHTML += "Formation parfaite <br><br>Cette formation est une bonne initiation au développement et une bonne découverte des différentes technologies. J’ai fait mon stage dans une agence web à Oslo où je travaille actuellement.<br><br><br>Jeremie M. , stagiaire 09 / 2021 à 09 / 2022"
+                    container.appendChild(div);
+                    div = document.createElement("div");
+                    div.className = "temoignageApprenant"
+                    div.innerHTML += "HumanBooster nous prépare de manière optimale<br><br>La formation m'a aidée à avoir la bonne logique, base de tout langage.<br>J'ai ainsi pu apprendre un nouveau langage et un nouveau Framework.<br>J’ai fait mon stage dans un bureau d'études. Pour l’instant, je fais du Python/Django.<br><br><br>Amandine, stagiaire de 2021/2022"
+                    container.appendChild(div);
+                    div = document.createElement("div");
+                    div.className = "temoignageApprenant"
+                    div.innerHTML += "On apprend énormément<br><br>La formation permet d'avoir un éventail de ce que l'on peut faire dans ce domaine.<br>J’ai fait mon stage dans un agence web en présentiel sur Saint Etienne. Maintenant, J'attends une réponse pour un emploi en télétravail dans une société parisienne.<br><br><br>Yann, stagiaire de 2021/2022."
+                    container.appendChild(div)
+                }
+            } 
+            right.onclick = function(){
+                /* La condition sert à stopper l'animation quand il n'y a plus d'image à afficher */
+                if(position > -nombre + 1)
+                position--;
+                container.style.transform = "translate("+ position * 800 +"px)";
+                container.style.transition = "all 1s ease";
+            }
+            left.onclick = function(){
+                /* La condition sert à stopper l'animation quand il n'y a plus d'image à afficher */
+                if(position < 0)
+                position++;
+                container.style.transform = "translate("+ position * 800 +"px)";
+                container.style.transition = "all 1s ease";
+            }
+            </script>
+        </div>
+    </section>
+        <!-- fin zone témoignage -->
+        <footer>
+        <img id="RNCP" src="img/rncp1.png" alt="Titre RNCP de niveau 5 (Bac+2)" titre="Titre RNCP de niveau 5">
+        <div class="footer">
+            <div id="footer_container"> <!--contient tout les éléments du footer -->
+                <div class="leftColumnFooter"> <!-- permet d'organiser les liens de la colonne de gauche du footer-->
+                    <h5>Navigation :</h5>
+                    <a href="HTML/stagiaires.html">Nos profils</a> 
+                    <a href="HTML/cursus.html#boutton">Notre cursus</a>
+                    <a href="HTML/pageActus.html">Notre actu</a>
+                </div>
+                <div class="logoFooter"> <!--partie centrale du footer-->
+                    <p>PROMO</p>
+                    <a href="index.html"><img src="img/phenixLogo2.png" alt="Promo Phénix" titre="Logo Phénix"></a>
+                    <p>PHENIX</p>
+                </div>
+                <div class="rightColumnFooter"> <!-- permet d'organiser les liens de la colonne de droite du footer-->
+                    <div class="logoRS_HB">
+                        <a href="https://humanbooster.com/" target="_blank"><img src="img/Logo_HB.png" alt="Human Booster" titre="Human Booster"></a>
+                        <a href="https://www.linkedin.com/company/human-booster/" target="_blank"><img src="img/LI_HB.png" alt="LinkedIn Human Booster" titre="LinkedIn Human Booster"></a>
+                        <a href="https://www.facebook.com/HBCOMPETENCES" target="_blank"><img src="img/FB_HB.png" alt="page Facebook Human Booster" titre="Facebook Human Booster"></a>
+                    </div>
+                    <div class="mentions">
+                        <a href="HTML/mentionLegale.html">Mentions légales</a>
+                        <a href="HTML/politique.html">Politique de confidentialité</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                2022 &copy; - Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+    <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+</body>
+</html>

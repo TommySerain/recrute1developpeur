@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prénom</title>
+    <link rel="stylesheet" href="../css/modalVideo.css">
+</head>
+<body>
+
+    <!-- Bloc prénom -->
+    <div class="titre">
+        <h1 id="prenom">Prénom</h1>
+    </div>
+
+    <!-- Bloc vidéo -->
+    <div class="bloc-video">
+        <div class="video-responsive">
+            <iframe id="video" width="560" height="315" src='https://www.youtube.com/embed/neV3EPgvZ3g' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!--Barre orange -->
+    <div class="crossbar"></div>
+
+    <!-- Bloc carte recto & verso -->
+    <div class="bloc-carte">
+        <div class="verso-carte">
+            <p class="phrase-accroche" id="phrase-accroche">
+            Mon objectif :<br><br>
+            Dans le cadre de ma formation, je suis à la recherche d'un stage de développeur Web du 17/07/23 au 13/09/23. <br>
+            Idéalement, je veux intégrer une équipe soudée dans une entreprise à taille humaine spécialisée dans l'évènementiel, le sport ou la culture. 
+            </p>
+        </div>
+        <div class="recto-carte" ><img src="" id="recto-carte" alt=""></div>
+    </div>
+        <!-- Barre orange -->
+        <div class="crossbar"></div>
+
+        <!-- Bloc contact & CV -->
+        <div class="bloc-contact-cv">
+            <!-- Bloc orange contact -->
+            <div class="bloc-contact">
+                <table>
+                    <tr>
+                        <!-- Logo + mail -->
+                        <td>
+                            <img src="https://imgur.com/dFFsF74.png" alt="" class="logo">
+                            <a class="lien" id="email" href="">maxence.leduc@yahoo.com</a>
+                        </td>
+                        <!-- Logo + lien linkedin -->
+                        <td>
+                            <img src="https://imgur.com/OQR6s0J.png" alt="" class="logo">
+                            <a id="linkedin" class="lien" target="_blank" href="">Mon LinkedIn</a></td>
+                    </tr>
+                    <tr>
+                        <!-- logo + téléphone-->
+                        <td>
+                            <img src="https://imgur.com/5FmC89X.png" alt="" class="logo">
+                            <p class="num" id="num">06.66.50.25.54</p>
+                        </td>
+                        <!-- logo + lien github -->
+                        <td>
+                            <img src="https://imgur.com/EYGxeO4.png" alt="" class="logo">
+                            <a class="lien" id="github" target="_blank" href="">Mon GitHub</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Fin bloc orange contact -->
+    
+            <!-- Bouton Ouvrir mon CV -->
+            <a target="_blank" id="CV" href="">
+                <button class="bouton-cv">Ouvrez mon CV</button>
+            </a>
+        </div>
+    <script src="../js/modalVideo.js"></script>
+</body>
+</html>

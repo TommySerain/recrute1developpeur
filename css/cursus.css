@@ -1,0 +1,459 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  background: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+section{
+  box-shadow: 1px 2px 5px 1px rgb(18, 19, 20);
+  margin: auto;
+  width: 80%;
+  margin-top: 140px;
+  border-radius: 15px;
+  padding-top: 40px;
+}
+
+  /* Concerne la barre de navigation */
+
+/* Barre de navigation */
+.logo{
+  max-width: 120px;
+  height: auto;
+  margin-top: 10px;
+}
+
+#header{
+  font-size: small;
+  /* background-color: #f29441; */
+  background: linear-gradient(#f29441, #994e0d);
+  margin: 0px;
+  height: 120px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.navBar{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#header li{
+  margin: 0 40px;
+  color: white;
+  font-weight: 700;
+  border-left: 0.15rem solid rgb(255, 255, 255);
+  border-right: 0.15rem solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 9px 9px;
+  transition-duration: 0.5s;
+}
+
+#header li:hover{
+  transform: translateY(3px);
+
+}
+.navigation {
+      text-decoration: none;
+      color: white;
+}
+/* Fin de la barre de navigation */
+
+/* Suppresion de la mise en forme des liens de navigation*/
+.navigation {
+  text-decoration: none;
+  color: white;
+}
+
+        /* Fin de la barre de navigation */
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.chevron{
+  height: auto;
+  width: 5%;
+  opacity: 0.3;
+  margin-left: 47.5%;
+  margin-bottom: -63px;
+}
+.chevron2{
+  height: auto;
+  width: 5%;
+  margin-left: 47.5%;
+  margin-bottom: -3465px;
+}
+
+/* POST-IT*/
+
+.post_it{
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 50px;
+  width: 350px;
+}
+
+.timeline ul {
+  background: white;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 1px;
+  margin: 0 auto;
+  padding-top: 50px;
+  border-left: 3px solid #33322f;
+
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: -1px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  box-shadow: 0px 5px 5px 0px #33322f;
+  padding: 15px;
+  min-height: 140px;
+}
+
+.timeline ul li:nth-child(-n+18){
+  opacity: 0.3;
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -96px;
+  top: 55%;
+  border-width: 1px 94px 1px 1px ;
+  border-color: #33322f;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -90px;
+  top: 55%;
+  border-width: 1px 89px 1px 1px;
+  border-color: #33322f;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#fini::after{
+  background-color: rgb(255, 0, 0);
+  border: solid 2px black;
+  top: 60%;
+}
+
+#en_cours::after{
+  background-color: #ffd001;
+  border: solid 2px black;
+}
+
+#pas_fait::after{
+  background-color: #ffffff;
+  border: solid 2px black;
+}
+
+.orange{
+  background-color: #F29441;
+}
+
+#boutton{
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 2px;
+  width: 140px;
+  margin: auto;
+  box-shadow: 2px 2px 2px 0px rgb(143, 143, 143);
+}
+
+#scrollUp
+{
+position: relative;
+bottom : 10px;
+right: -1000px;
+opacity: 0.5;
+}
+
+#scrollUp:hover{
+  opacity: 1;
+  }
+  
+.image{
+  width: 50px;
+  border: solid black;
+  border-radius: 35px;
+}
+
+/* ZONE DE TEXTE */
+
+.block { text-align: center; 
+          margin-top: 50px;
+}
+
+.timelinepresentation{
+  padding: 8px 80px 10px 80px;
+  margin:auto;
+  width: 600px; top: 6526px; left: 239px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 5px 1px rgb(18, 19, 20);
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #f45b69;
+}
+
+.timeline ul li div {
+  visibility: visible;
+  /* opacity: 1; */
+  transition: all 0.5s ease-in-out;
+}
+
+.reste{
+  opacity: 0.3;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(50px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-50px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
+  }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timeline-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timeline-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Début du footer */
+.footer{
+  width: 100%;
+  background: linear-gradient(#994e0d, #f29441 80%);
+}
+
+#footer_container{ /*background du footer*/
+  width: 100%;
+  height:200px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logoFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  font-weight: bold;
+}
+
+.leftColumnFooter, .rightColumnFooter{ /*organisation en colonne des liens inclus dans le footer*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+height:100%;
+}
+
+.leftColumnFooter a, .leftColumnFooter h5, .rightColumnFooter a{
+min-width : 250px;
+margin: 2px;
+padding : 2px;
+text-align: center;
+color:white;
+text-decoration : none;
+}
+
+.leftColumnFooter a, .leftColumnFooter h5{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.leftColumnFooter a:hover{
+  color: rgb(20, 20, 20);
+}
+
+.rightColumnFooter a {
+  font-size: 0.8rem;
+}
+
+.rightColumnFooter a:hover{
+  color: rgb(20, 20, 20);
+}
+#RNCP{ /*position du logo RNCP*/
+  max-width: 200px;
+  height: auto;
+  position: relative;
+  top: 100px;
+  transform: rotate(290deg);
+}
+.copyright{ /*bande année, copyright, droits réservés*/
+  font-size: small;
+  color: white;
+  text-align: center;
+  background-color:#F29441;
+  padding-bottom: 5px;
+}
+.rightColumnFooter a img{
+  max-width: 50px;
+  height: auto;
+}
+.rightColumnFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content:right ;
+  margin: 5px;
+}
+.logoRS_HB{
+  display: flex;
+  flex-direction: column;
+}
+.mentions{
+  display: flex;
+  flex-direction: column;
+}
+/*Fin du footer */

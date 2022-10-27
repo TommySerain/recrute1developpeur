@@ -1,0 +1,207 @@
+body
+{
+    margin: 0;
+    width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+iframe
+{
+    width: 100%;
+}
+/* Barre de navigation */
+.logo{
+    max-width: 120px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#header{
+    font-size: small;
+    /* background-color: #f29441; */
+    background: linear-gradient(#f29441, #994e0d);
+    margin: 0px;
+    height: 120px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.navBar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#header li{
+    margin: 0 40px;
+    color: white;
+    font-weight: 700;
+    border-left: 0.15rem solid rgb(255, 255, 255);
+    border-right: 0.15rem solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 9px 9px;
+    transition-duration: 0.5s;
+}
+
+#header li:hover{
+    transform: translateY(3px);
+
+}
+.navigation {
+        text-decoration: none;
+        color: white;
+}
+/* Fin de la barre de navigation */
+
+/* Début du footer */
+.footer{
+    width: 100%;
+    background: linear-gradient(#994e0d, #f29441 80%);
+
+}
+
+#footer_container{ /*background du footer*/
+    width: 100%;
+    height:200px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    font-weight: bold;
+}
+
+.leftColumnFooter, .rightColumnFooter{ /*organisation en colonne des liens inclus dans le footer*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+height:100%;
+}
+
+.leftColumnFooter a, .leftColumnFooter h5, .rightColumnFooter a{
+min-width : 250px;
+margin: 2px;
+padding : 2px;
+text-align: center;
+color:white;
+text-decoration : none;
+}
+
+.leftColumnFooter a, .leftColumnFooter h5{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.leftColumnFooter a:hover{
+    color: rgb(20, 20, 20);
+}
+
+.rightColumnFooter a {
+    font-size: 0.8rem;
+}
+
+.rightColumnFooter a:hover{
+    color: rgb(20, 20, 20);
+}
+#RNCP /*position du logo RNCP*/
+{
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    top: 100px;
+    transform: rotate(290deg);
+}
+.copyright /*bande année, copyright, droits réservés*/
+{
+    font-size: small;
+    color: white;
+    text-align: center;
+    background-color:#F29441;
+    padding-bottom: 5px;
+}
+/* .logoRS_HB
+{
+
+} */
+.rightColumnFooter a img
+{
+    /* display:flex; */
+    max-width: 50px;
+    height: auto;
+    /* text-align: right;
+    justify-content: flex-end; */
+}
+.rightColumnFooter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:right ;
+    margin: 5px;
+}
+.logoRS_HB
+{
+    display: flex;
+    flex-direction: column;
+}
+.mentions
+{
+    display: flex;
+    flex-direction: column;
+}
+/*Fin du footer */
+
+/* Page mentions légales*/
+#mentionsLegales
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.noms
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+.noms div
+{
+    margin: 15px;
+}
+.noms div a
+{
+    text-decoration: none;
+    color: black;
+}
+/* Fin mentions légales */
+
+/* Page confidentialité */
+#corps_confidentialite
+{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+#HB
+{
+    text-decoration: none;
+    color : rgb(61, 57, 55);
+    font-weight: bold;
+}
+#HB:hover
+{
+    color: #F29441;
+}
+/* Fin page confidentialité */
+
+/* Préférences de thème, Dark Mode si le device est paramétré en Dark Theme */
+

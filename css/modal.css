@@ -1,0 +1,89 @@
+body {
+    margin: auto;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 50% auto;
+}
+
+.prenom {
+    text-align: center;
+    margin: 10% auto -1rem auto;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px; 
+    padding: 1rem 2rem;
+    min-width: 20%; 
+    justify-content: center;
+    width: 30%;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+
+}
+
+.bloc-carte{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 726px;
+    max-height: 850px;
+    margin: 0 auto;
+    padding: 5%;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+}
+.verso-carte{
+    position: relative;
+    width: 269px;
+    height: 379px;
+    background: #D8D8D8;
+    border: 8px solid #000000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25),-1px -1px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 7%;
+    margin-top: 0;
+    margin-bottom: 3%;
+    text-align: center;
+}
+.recto-carte{
+    width: 299px;
+    height: 399px;
+    margin-left: 7%;
+}
+.recto-carte img{
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -10px;
+}
+.phrase-accroche{
+    vertical-align: middle;
+    padding: 0 1rem;
+}
+/* Fin bloc carte recto&verso */
+
+
+.trait {
+    border: solid 1px #f29441;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.questions {
+    text-align: center;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    margin: 20% auto;
+    border-radius: 15px; 
+    padding: 1rem 2rem;
+    min-width: 20%; 
+    justify-content: center;
+    width: 60%;
+    margin-top: 10%;
+}

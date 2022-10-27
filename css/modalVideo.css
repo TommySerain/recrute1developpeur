@@ -1,0 +1,178 @@
+
+/* PAGE INDIVIDUELLE */
+
+/* Mise en forme textes */
+p{
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+h1{
+    font-size: 2.2em;
+    text-decoration: underline #f29441;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Vidéo */
+.video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+}
+    
+.video-responsive iframe {
+    position: absolute;
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+}
+.bloc-video{
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    padding: 5% 5%;
+    margin: 0 auto 3% auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Prénom */
+.titre{
+    position: relative;
+    width: 10%;
+    min-width: 200px;
+    text-align: center;
+    padding: 1% 4%;
+    margin: 5% auto -2% auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Barre orange */
+.crossbar{
+    border: #f29441 solid 2px;
+    width: 40%;
+    margin: 5% auto;
+    box-shadow:  5px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Début bloc carte recto & verso*/
+.bloc-carte{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 726px;
+    max-height: 850px;
+    margin: 0 auto;
+    padding: 5%;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+}
+.verso-carte{
+    position: relative;
+    width: 269px;
+    height: 379px;
+    background: #D8D8D8;
+    border: 8px solid #000000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25),-1px -1px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 7%;
+    margin-top: 0;
+    margin-bottom: 3%;
+    text-align: center;
+    overflow: auto;
+}
+.recto-carte{
+    width: 299px;
+    height: 399px;
+    margin-left: 7%;
+}
+.recto-carte img{
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -10px;
+}
+.phrase-accroche{
+    margin: 2em 1em 2em 1em;
+    font-size: 1em;
+}
+/* Fin bloc carte recto&verso */
+
+/* Début bloc contact & CV */
+.bloc-contact-cv{
+    position: relative;
+    width: 80%;
+    max-width: 726px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 2%;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Bloc orange contact */
+.bloc-contact{
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin: 1% auto;
+    background-color: #F29441;
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.25), 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.logo{
+    width: 2rem;
+}
+td{
+    display: inline-flex;
+    margin: 1%;
+    text-align: center;
+}
+.num{
+    font-size: 0.8em;
+}
+td .lien{
+    font-size: 0.9em;
+    padding-left: 1%;
+    width: 100px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+td .lien:hover{
+    font-weight: bold;
+}
+tr{
+    display: inline-block;
+}
+/* Fin bloc orange contact */
+
+/* Bouton ouvrez mon CV */
+.bouton-cv{
+    width: 20%;
+    margin-top: 5%;
+    background-color: #F29441;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+.bouton-cv:hover{
+    background: #D67722;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    cursor: pointer;
+}
